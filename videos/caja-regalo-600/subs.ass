@@ -1,0 +1,34 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,ElielleSansXB,58,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H64000000,0,0,0,0,100,100,0,0,1,5,2,2,40,40,230,1
+Style: Price,ElielleSansXB,80,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H004A2A7A,0,0,0,0,100,100,0,0,3,14,0,5,40,40,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.45,0:00:02.06,Sub,,0,0,0,,{\fad(60,60)}¡Hola! Hoy te enseño
+Dialogue: 0,0:00:02.07,0:00:03.44,Sub,,0,0,0,,{\fad(60,60)}cómo armamos esta
+Dialogue: 0,0:00:03.45,0:00:05.06,Sub,,0,0,0,,{\fad(60,60)}linda caja de regalo
+Dialogue: 0,0:00:06.30,0:00:08.16,Sub,,0,0,0,,{\fad(60,60)}Primero, llenamos la caja
+Dialogue: 0,0:00:08.17,0:00:09.95,Sub,,0,0,0,,{\fad(60,60)}con papel picado rosado,
+Dialogue: 0,0:00:09.96,0:00:10.99,Sub,,0,0,0,,{\fad(60,60)}bien esponjoso
+Dialogue: 0,0:00:12.50,0:00:13.77,Sub,,0,0,0,,{\fad(60,60)}Luego colocamos una
+Dialogue: 0,0:00:13.78,0:00:15.66,Sub,,0,0,0,,{\fad(60,60)}mascarilla facial hidratante
+Dialogue: 0,0:00:18.90,0:00:20.36,Sub,,0,0,0,,{\fad(60,60)}Agregamos una pinza para
+Dialogue: 0,0:00:20.37,0:00:22.01,Sub,,0,0,0,,{\fad(60,60)}el cabello en forma de flor
+Dialogue: 0,0:00:25.40,0:00:27.00,Sub,,0,0,0,,{\fad(60,60)}Después, unos parches
+Dialogue: 0,0:00:27.01,0:00:27.99,Sub,,0,0,0,,{\fad(60,60)}para los ojos
+Dialogue: 0,0:00:31.77,0:00:33.47,Sub,,0,0,0,,{\fad(60,60)}Y para completar, un set
+Dialogue: 0,0:00:33.48,0:00:34.76,Sub,,0,0,0,,{\fad(60,60)}de collar y aretes
+Dialogue: 0,0:00:34.77,0:00:36.12,Sub,,0,0,0,,{\fad(60,60)}de acero inoxidable
+Dialogue: 0,0:00:38.27,0:00:39.24,Sub,,0,0,0,,{\fad(60,60)}¡Y así queda!
+Dialogue: 0,0:00:39.25,0:00:41.04,Sub,,0,0,0,,{\fad(60,60)}Perfecta para sorprender
+Dialogue: 0,0:00:41.05,0:00:42.48,Sub,,0,0,0,,{\fad(60,60)}a quien más quieres
+Dialogue: 0,0:00:43.47,0:00:45.22,Sub,,0,0,0,,{\fad(60,60)}Llévatela por solo
+Dialogue: 0,0:00:45.23,0:00:46.10,Sub,,0,0,0,,{\fad(60,60)}600 pesos
+Dialogue: 1,0:00:43.37,0:00:49.29,Price,,0,0,0,,{\pos(360,400)\fad(200,150)\t(0,180,\fscx118\fscy118)\t(180,360,\fscx100\fscy100)}Solo $600
