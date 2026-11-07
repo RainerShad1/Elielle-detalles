@@ -3,32 +3,83 @@ ScriptType: v4.00+
 PlayResX: 720
 PlayResY: 1280
 WrapStyle: 0
+ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,ElielleSansXB,58,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H64000000,0,0,0,0,100,100,0,0,1,5,2,2,40,40,230,1
-Style: Price,ElielleSansXB,80,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H004A2A7A,0,0,0,0,100,100,0,0,3,14,0,5,40,40,0,1
+Style: Sub,EFredoka,82,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H70300818,0,0,0,0,100,100,1,0,1,8,4,2,50,50,360,1
+Style: Price,EFredoka,86,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H004A2A7A,0,0,0,0,100,100,0,0,3,14,0,5,40,40,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.45,0:00:02.06,Sub,,0,0,0,,{\fad(60,60)}¡Hola! Hoy te enseño
-Dialogue: 0,0:00:02.07,0:00:03.44,Sub,,0,0,0,,{\fad(60,60)}cómo armamos esta
-Dialogue: 0,0:00:03.45,0:00:05.06,Sub,,0,0,0,,{\fad(60,60)}linda caja de regalo
-Dialogue: 0,0:00:06.30,0:00:08.16,Sub,,0,0,0,,{\fad(60,60)}Primero, llenamos la caja
-Dialogue: 0,0:00:08.17,0:00:09.95,Sub,,0,0,0,,{\fad(60,60)}con papel picado rosado,
-Dialogue: 0,0:00:09.96,0:00:10.99,Sub,,0,0,0,,{\fad(60,60)}bien esponjoso
-Dialogue: 0,0:00:12.50,0:00:13.77,Sub,,0,0,0,,{\fad(60,60)}Luego colocamos una
-Dialogue: 0,0:00:13.78,0:00:15.66,Sub,,0,0,0,,{\fad(60,60)}mascarilla facial hidratante
-Dialogue: 0,0:00:18.90,0:00:20.36,Sub,,0,0,0,,{\fad(60,60)}Agregamos una pinza para
-Dialogue: 0,0:00:20.37,0:00:22.01,Sub,,0,0,0,,{\fad(60,60)}el cabello en forma de flor
-Dialogue: 0,0:00:25.40,0:00:27.00,Sub,,0,0,0,,{\fad(60,60)}Después, unos parches
-Dialogue: 0,0:00:27.01,0:00:27.99,Sub,,0,0,0,,{\fad(60,60)}para los ojos
-Dialogue: 0,0:00:31.77,0:00:33.47,Sub,,0,0,0,,{\fad(60,60)}Y para completar, un set
-Dialogue: 0,0:00:33.48,0:00:34.76,Sub,,0,0,0,,{\fad(60,60)}de collar y aretes
-Dialogue: 0,0:00:34.77,0:00:36.12,Sub,,0,0,0,,{\fad(60,60)}de acero inoxidable
-Dialogue: 0,0:00:38.27,0:00:39.24,Sub,,0,0,0,,{\fad(60,60)}¡Y así queda!
-Dialogue: 0,0:00:39.25,0:00:41.04,Sub,,0,0,0,,{\fad(60,60)}Perfecta para sorprender
-Dialogue: 0,0:00:41.05,0:00:42.48,Sub,,0,0,0,,{\fad(60,60)}a quien más quieres
-Dialogue: 0,0:00:43.47,0:00:45.22,Sub,,0,0,0,,{\fad(60,60)}Llévatela por solo
-Dialogue: 0,0:00:45.23,0:00:46.10,Sub,,0,0,0,,{\fad(60,60)}600 pesos
+Dialogue: 0,0:00:00.44,0:00:01.32,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}¡Hola!{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:01.34,0:00:01.57,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Hoy{\c&HFFFFFF&\fscx100\fscy100} te enseño
+Dialogue: 0,0:00:01.57,0:00:01.67,Sub,,0,0,0,,Hoy {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}te{\c&HFFFFFF&\fscx100\fscy100} enseño
+Dialogue: 0,0:00:01.67,0:00:02.26,Sub,,0,0,0,,Hoy te {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}enseño{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:02.26,0:00:02.61,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}cómo{\c&HFFFFFF&\fscx100\fscy100} armamos
+Dialogue: 0,0:00:02.61,0:00:03.10,Sub,,0,0,0,,cómo {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}armamos{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:03.10,0:00:03.57,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}esta{\c&HFFFFFF&\fscx100\fscy100} linda caja
+Dialogue: 0,0:00:03.57,0:00:04.07,Sub,,0,0,0,,esta {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}linda{\c&HFFFFFF&\fscx100\fscy100} caja
+Dialogue: 0,0:00:04.07,0:00:04.34,Sub,,0,0,0,,esta linda {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}caja{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:04.34,0:00:04.55,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}de{\c&HFFFFFF&\fscx100\fscy100} regalo
+Dialogue: 0,0:00:04.55,0:00:05.48,Sub,,0,0,0,,de {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}regalo{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:06.33,0:00:07.05,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Primero{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:07.05,0:00:07.58,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}llenamos{\c&HFFFFFF&\fscx100\fscy100} la caja
+Dialogue: 0,0:00:07.58,0:00:07.72,Sub,,0,0,0,,llenamos {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}la{\c&HFFFFFF&\fscx100\fscy100} caja
+Dialogue: 0,0:00:07.72,0:00:08.03,Sub,,0,0,0,,llenamos la {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}caja{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:08.03,0:00:08.26,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}con{\c&HFFFFFF&\fscx100\fscy100} papel picado
+Dialogue: 0,0:00:08.26,0:00:08.62,Sub,,0,0,0,,con {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}papel{\c&HFFFFFF&\fscx100\fscy100} picado
+Dialogue: 0,0:00:08.62,0:00:09.03,Sub,,0,0,0,,con papel {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}picado{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:09.03,0:00:09.86,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}rosado{\c&HFFFFFF&\fscx100\fscy100} bien
+Dialogue: 0,0:00:09.86,0:00:10.17,Sub,,0,0,0,,rosado {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}bien{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:10.17,0:00:11.39,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}esponjoso{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:12.58,0:00:13.04,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Luego{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:13.04,0:00:13.69,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}colocamos{\c&HFFFFFF&\fscx100\fscy100} una
+Dialogue: 0,0:00:13.69,0:00:13.82,Sub,,0,0,0,,colocamos {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}una{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:13.82,0:00:14.44,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}mascarilla{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:14.44,0:00:14.84,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}facial{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:14.84,0:00:16.08,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}hidratante{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:18.98,0:00:19.61,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Agregamos{\c&HFFFFFF&\fscx100\fscy100} una
+Dialogue: 0,0:00:19.61,0:00:19.82,Sub,,0,0,0,,Agregamos {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}una{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:19.82,0:00:20.23,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}pinza{\c&HFFFFFF&\fscx100\fscy100} para el
+Dialogue: 0,0:00:20.23,0:00:20.39,Sub,,0,0,0,,pinza {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}para{\c&HFFFFFF&\fscx100\fscy100} el
+Dialogue: 0,0:00:20.39,0:00:20.48,Sub,,0,0,0,,pinza para {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}el{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:20.48,0:00:21.03,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}cabello{\c&HFFFFFF&\fscx100\fscy100} en forma
+Dialogue: 0,0:00:21.03,0:00:21.25,Sub,,0,0,0,,cabello {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}en{\c&HFFFFFF&\fscx100\fscy100} forma
+Dialogue: 0,0:00:21.25,0:00:21.52,Sub,,0,0,0,,cabello en {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}forma{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:21.52,0:00:21.77,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}de{\c&HFFFFFF&\fscx100\fscy100} flor
+Dialogue: 0,0:00:21.77,0:00:22.48,Sub,,0,0,0,,de {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}flor{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:25.49,0:00:26.35,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Después{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:26.35,0:00:26.72,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}unos{\c&HFFFFFF&\fscx100\fscy100} parches
+Dialogue: 0,0:00:26.72,0:00:27.11,Sub,,0,0,0,,unos {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}parches{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:27.11,0:00:27.38,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}para{\c&HFFFFFF&\fscx100\fscy100} los ojos
+Dialogue: 0,0:00:27.38,0:00:27.62,Sub,,0,0,0,,para {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}los{\c&HFFFFFF&\fscx100\fscy100} ojos
+Dialogue: 0,0:00:27.62,0:00:28.45,Sub,,0,0,0,,para los {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}ojos{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:31.82,0:00:31.99,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Y{\c&HFFFFFF&\fscx100\fscy100} para completar
+Dialogue: 0,0:00:31.99,0:00:32.23,Sub,,0,0,0,,Y {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}para{\c&HFFFFFF&\fscx100\fscy100} completar
+Dialogue: 0,0:00:32.23,0:00:33.16,Sub,,0,0,0,,Y para {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}completar{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:33.16,0:00:33.43,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}un{\c&HFFFFFF&\fscx100\fscy100} set de
+Dialogue: 0,0:00:33.43,0:00:33.69,Sub,,0,0,0,,un {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}set{\c&HFFFFFF&\fscx100\fscy100} de
+Dialogue: 0,0:00:33.69,0:00:33.80,Sub,,0,0,0,,un set {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}de{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:33.80,0:00:34.27,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}collar{\c&HFFFFFF&\fscx100\fscy100} y aretes
+Dialogue: 0,0:00:34.27,0:00:34.39,Sub,,0,0,0,,collar {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}y{\c&HFFFFFF&\fscx100\fscy100} aretes
+Dialogue: 0,0:00:34.39,0:00:34.82,Sub,,0,0,0,,collar y {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}aretes{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:34.82,0:00:34.99,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}de{\c&HFFFFFF&\fscx100\fscy100} acero
+Dialogue: 0,0:00:34.99,0:00:35.28,Sub,,0,0,0,,de {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}acero{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:35.28,0:00:36.56,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}inoxidable{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:38.30,0:00:38.53,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}¡Y{\c&HFFFFFF&\fscx100\fscy100} así queda!
+Dialogue: 0,0:00:38.53,0:00:38.85,Sub,,0,0,0,,¡Y {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}así{\c&HFFFFFF&\fscx100\fscy100} queda!
+Dialogue: 0,0:00:38.85,0:00:39.70,Sub,,0,0,0,,¡Y así {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}queda!{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:39.70,0:00:40.45,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Perfecta{\c&HFFFFFF&\fscx100\fscy100} para
+Dialogue: 0,0:00:40.45,0:00:40.62,Sub,,0,0,0,,Perfecta {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}para{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:40.62,0:00:41.23,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}sorprender{\c&HFFFFFF&\fscx100\fscy100} a
+Dialogue: 0,0:00:41.23,0:00:41.30,Sub,,0,0,0,,sorprender {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}a{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:41.30,0:00:41.67,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}quien{\c&HFFFFFF&\fscx100\fscy100} más
+Dialogue: 0,0:00:41.67,0:00:41.94,Sub,,0,0,0,,quien {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}más{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:41.94,0:00:42.92,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}quieres{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:43.55,0:00:44.18,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}Llévatela{\c&HFFFFFF&\fscx100\fscy100} por
+Dialogue: 0,0:00:44.18,0:00:44.37,Sub,,0,0,0,,Llévatela {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}por{\c&HFFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:44.37,0:00:44.76,Sub,,0,0,0,,{\fscx88\fscy88\t(0,110,\fscx100\fscy100)}{\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}solo{\c&HFFFFFF&\fscx100\fscy100} $600 pesos
+Dialogue: 0,0:00:44.76,0:00:45.60,Sub,,0,0,0,,solo {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}$600{\c&HFFFFFF&\fscx100\fscy100} pesos
+Dialogue: 0,0:00:45.60,0:00:46.53,Sub,,0,0,0,,solo $600 {\c&HC79BFF&\t(0,90,\fscx112\fscy112)\t(90,180,\fscx100\fscy100)}pesos{\c&HFFFFFF&\fscx100\fscy100}
 Dialogue: 1,0:00:43.37,0:00:49.29,Price,,0,0,0,,{\pos(360,400)\fad(200,150)\t(0,180,\fscx118\fscy118)\t(180,360,\fscx100\fscy100)}Solo $600

@@ -163,23 +163,54 @@ def ts(x):
     return f'{h}:{m:02d}:{s:05.2f}'
 
 ass = [
-    '[Script Info]', 'ScriptType: v4.00+', f'PlayResX: {W}', f'PlayResY: {H}', 'WrapStyle: 0', '',
+    '[Script Info]', 'ScriptType: v4.00+', f'PlayResX: {W}', f'PlayResY: {H}', 'WrapStyle: 0', 'ScaledBorderAndShadow: yes', '',
     '[V4+ Styles]',
     'Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
-    'Style: Sub,ElielleSansXB,58,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H64000000,0,0,0,0,100,100,0,0,1,5,2,2,40,40,230,1',
-    'Style: Price,ElielleSansXB,80,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H004A2A7A,0,0,0,0,100,100,0,0,3,14,0,5,40,40,0,1',
+    # blanco, borde vino grueso y sombra suave; ubicado sobre la zona de botones de Reels/TikTok
+    'Style: Sub,EFredoka,82,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H70300818,0,0,0,0,100,100,1,0,1,8,4,2,50,50,360,1',
+    'Style: Price,EFredoka,86,&H00FFFFFF,&H00FFFFFF,&H004A2A7A,&H004A2A7A,0,0,0,0,100,100,0,0,3,14,0,5,40,40,0,1',
     '', '[Events]', 'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text',
 ]
-for a, b, at, chunks in VO:
-    if at >= MAIN_END:  # la tarjeta final ya muestra el texto
-        continue
-    dur = b - a
-    total_chars = sum(len(c) for c in chunks)
-    cur = at
-    for c in chunks:
-        d = dur * len(c) / total_chars
-        ass.append(f'Dialogue: 0,{ts(cur)},{ts(cur + d - 0.01)},Sub,,0,0,0,,{{\\fad(60,60)}}{c}')
-        cur += d
+import json, re
+HL = '&HC79BFF&'   # rosa (#FF9BC7) para la palabra que se esta diciendo
+words = json.load(open('audio/words.json'))['words']
+words = [w for w in words if w.get('type') == 'word']
+for w in words:  # correcciones de la transcripcion
+    if w['text'] == '¡Y' and w['start'] < 30: w['start'] = 30.80
+    if w['text'].startswith('seiscientos'): w['text'] = '$600'
+# pasar tiempos de la voz a tiempos del video
+vw = []
+for w in words:
+    for a, b, at, _ in VO:
+        if a - 0.05 <= w['start'] <= b + 0.05:
+            if at >= MAIN_END: break   # la tarjeta final ya muestra el texto
+            vw.append(dict(text=w['text'], s=at + w['start'] - a, e=at + w['end'] - a,
+                           brk=bool(re.search(r'[.,!?]$', w['text']))))
+            break
+# agrupar en frases cortas (max 3 palabras / 16 letras), cortando en la puntuacion
+groups, cur = [], []
+for w in vw:
+    clean = re.sub(r'[.,]$', '', w['text'])
+    if cur and (len(cur) >= 3 or len(' '.join(x['t'] for x in cur) + ' ' + clean) > 16):
+        groups.append(cur); cur = []
+    cur.append(dict(t=clean, s=w['s'], e=w['e']))
+    if w['brk']:
+        groups.append(cur); cur = []
+if cur: groups.append(cur)
+for gi, g in enumerate(groups):
+    nxt = groups[gi + 1][0]['s'] if gi + 1 < len(groups) else 1e9
+    g_end = min(nxt - 0.05, g[-1]['e'] + 0.45)
+    for i, w in enumerate(g):
+        t0 = g[0]['s'] - 0.05 if i == 0 else w['s']
+        t1 = g[i + 1]['s'] if i + 1 < len(g) else g_end
+        parts = []
+        for j, x in enumerate(g):
+            if j == i:
+                parts.append('{\\c' + HL + '\\t(0,90,\\fscx112\\fscy112)\\t(90,180,\\fscx100\\fscy100)}' + x['t'] + '{\\c&HFFFFFF&\\fscx100\\fscy100}')
+            else:
+                parts.append(x['t'])
+        pop = '{\\fscx88\\fscy88\\t(0,110,\\fscx100\\fscy100)}' if i == 0 else ''
+        ass.append(f'Dialogue: 0,{ts(t0)},{ts(t1)},Sub,,0,0,0,,{pop}' + ' '.join(parts))
 # etiqueta de precio sobre el resultado final
 p0 = seg_start[6] + 5.5
 ass.append(f'Dialogue: 1,{ts(p0)},{ts(MAIN_END)},Price,,0,0,0,,{{\\pos(360,400)\\fad(200,150)\\t(0,180,\\fscx118\\fscy118)\\t(180,360,\\fscx100\\fscy100)}}Solo $600')
